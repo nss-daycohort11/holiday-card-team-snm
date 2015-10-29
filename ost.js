@@ -1,4 +1,3 @@
-var WordGroup = {};
 var WordGroup = (function(wg) {
   // var lexBengali = ["janmadina", "Śubha"];
   // var lexEnglish = ["birthday", "happy"];

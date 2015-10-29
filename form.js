@@ -23,7 +23,7 @@ $(document).ready(function() {
 	//BUTTON TO TRASLATE TO SPANISH
 	SpanishBtn.click(function(){
 		console.log(SpanishBtn);
-		var input = $("#input-text").val();
+		var input = $("#input-text").val().toLowerCase();
 		var translateMe;
 		var output;
 
@@ -38,7 +38,7 @@ $(document).ready(function() {
 	//BUTTON TO TRANSLATE TO INTALIANO
 	intalianBtn.click(function(){
 		console.log(intalianBtn);
-		var input = $("#input-text").val();
+		var input = $("#input-text").val().toLowerCase();
 		var translateMe;
 		var output;
 
@@ -53,7 +53,7 @@ $(document).ready(function() {
 	//BUTTON TO TRANSLATE TO BENGALI
 	bengaliBtn.click(function(){
 		console.log(bengaliBtn);
-		var input = $("#input-text").val();
+		var input = $("#input-text").val().toLowerCase();
 		var translateMe;
 		var output;
 
@@ -64,6 +64,7 @@ $(document).ready(function() {
 		console.log("this is output",output)
 		displayOutput(output);
 	});
+
 
 	//BUTTON FOR TALKING PERSON!!!
 	talking.click(function() {

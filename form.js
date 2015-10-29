@@ -1,15 +1,24 @@
 	
 var lexicon = [];
-var input = $("#input-text").val();
+
 var SpanishBtn = $("#spanish-btn");
 var intalianBtn$("#italian-btn");
 var bengaliBtn$("#bengali-btn")
 
-
+function ConverterButtons(thing){
+	var newinput = [];
+	newinput = input.split(" ");
+	return newinput;
+};
 
 SpanishBtn.click(function(){
-console.log(SpanishBtn);
+	console.log(SpanishBtn);
+	var input = $("#input-text").val();
+	var translateMe;
+	var output;
 
+	translateMe = ConverterButtons(input);
+	output = WordGroup.translateToSpanish(translateMe);
 });
 
 // newinput = input.split(input)

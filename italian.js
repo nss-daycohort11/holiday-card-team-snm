@@ -1,7 +1,7 @@
 console.log("test test");
 
 var WordGroup = (function(wordgroup) {
-	var lexicon = {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"};
+	var lexicon = {"merry":"buon", "christmas":"Natale", "and":"e", "happy":"felice", "new":"nuovo", "year":"anno"};
 	
 
 		wordgroup.transToItalian = function(inputText) {
@@ -19,6 +19,10 @@ var WordGroup = (function(wordgroup) {
 
 			return output;
 
+		},
+
+		wordgroup.getWord = function(inputWord) {
+			return lexicon[inputWord];
 		}
 
 	return wordgroup;

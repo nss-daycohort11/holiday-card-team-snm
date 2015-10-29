@@ -1,13 +1,20 @@
-var WordGroup = (function(wg){
-	var WordGroup = ["Merry", "Christmas", "and", "a", "happy", "New", "Year"];
+var WordGroup = (function(wg) {
+  var lexSpanish = {"merry":"feliz", "christmas":"navidad", "and":"y", "a":"un", "happy":"feliz", "new":"nuevo","year":"año"};
 
-	translateTo = function(argument) {
-		for (var i = 0; i < $("input-text.length"); i++) {
-			input[i]
-		};
-	}
+  wg.translateToSpanish = function(inputArray) {
+    var output = "";
+    var i =0;
+    var current;
 
+    for (i = 0; i < inputArray.length; i++) {
+      current = inputArray[i];
+      output += lexSpanish[current] + " ";
+    };
 
-	return wg;
+    return output;
+  };
 
-})(WordGroup);
+  return wg;
+
+})({});
+

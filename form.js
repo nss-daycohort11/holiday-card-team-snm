@@ -2,6 +2,7 @@ $(document).ready(function() {
 	var SpanishBtn = $("#spanish-btn");
 	var intalianBtn = $("#italian-btn");
 	var bengaliBtn = $("#bengali-btn");
+	var talking = $("#talk");
 	var finalOutput;
 
 
@@ -16,6 +17,7 @@ $(document).ready(function() {
 
 	function displayOutput(putput) {
 		$("#putItHere").html(putput);
+		finalOutput = putput;
 	}
 
 	//BUTTON TO TRASLATE TO SPANISH
@@ -62,5 +64,11 @@ $(document).ready(function() {
 		console.log("this is output",output)
 		displayOutput(output);
 	});
+
+	//BUTTON FOR TALKING PERSON!!!
+	talking.click(function() {
+		responsiveVoice.speak(finalOutput);
+	});
+
 
 });

@@ -1,33 +1,30 @@
 console.log("test test");
 
-var WordGroup = (function() {
+var WordGroup = (function(wordgroup) {
 	var lexicon = {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"};
 	
+
+		wordgroup.transToItalian = function(inputText) {
+
+			var output = "";		
+			
+			for (var i = 0; i < inputText.length; i++) {
+				var currentWord = inputText[i];
+				console.log("This is the thing",currentWord)
+				var matchingWord = lexicon[currentWord];
+				console.log("This is the other thing",matchingWord)
+				output += matchingWord + " ";
+				
+			}
+
+			return output;
+
+		}
+
+	return wordgroup;
 	
 
-	return {
-		transToItalian: function(inputText) {
-
-		var output = "";		
-			
-		for (var i = 0; i < inputText.length; i++) {
-			var currentWord = inputText[i];
-			console.log("This is the thing",currentWord)
-			var matchingWord = lexicon[currentWord];
-			console.log("This is the other thing",matchingWord)
-			output += matchingWord + " ";
-			
-		}
-
-		return output;
-
-
-
-		}
-	}
-
-
-}());
+}(WordGroup));
 
 var testObject = {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"};
 
